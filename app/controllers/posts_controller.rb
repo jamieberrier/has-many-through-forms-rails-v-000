@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     # build form field
-    @post.categories.build
+    #@post.categories.build
   end
 
   def create
