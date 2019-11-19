@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
   # adds methods, ie: category_ids=ids
   has_many :categories, through: :post_categories
   # adds methods
-  #accepts_nested_attributes_for :categories
-=begin
+  accepts_nested_attributes_for :categories
+
   # custom setter
   def categories_attributes=(categories_hashes)
     categories_hashes.values.each do |category_attributes|
@@ -23,5 +23,5 @@ class Post < ActiveRecord::Base
       end
     end
   end
-=end
+
 end
